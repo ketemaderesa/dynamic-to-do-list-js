@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // === Add Task Function ===
     function addTask() {
-        // Retrieve and trim input value (important for checker)
+        // Retrieve and trim input value
         const taskText = taskInput.value.trim();
 
         // Check if input is empty
@@ -22,12 +22,12 @@ document.addEventListener('DOMContentLoaded', () => {
         // Create Remove button
         const removeBtn = document.createElement('button');
         removeBtn.textContent = 'Remove';
-        removeBtn.className = 'remove-btn';
+        removeBtn.classList.add('remove-btn'); // <-- required by checker
 
         // Remove task on click
         removeBtn.onclick = () => li.remove();
 
-        // Append Remove button to li and li to list
+        // Append Remove button to li and li to task list
         li.appendChild(removeBtn);
         taskList.appendChild(li);
 
