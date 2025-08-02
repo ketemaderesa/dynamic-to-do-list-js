@@ -1,91 +1,51 @@
-dynamic-to-do-list-js
-__________________________________________________________________________________________________________________________
+Dynamic To-Do List with Local Storage
+__________________________________________________________________________________________________________________
 Overview
--------------------------------------------------------------------------------------------------------------------------
-This is a dynamic To-Do List application built with HTML, CSS, and JavaScript.
-The application allows users to:
+---------------------------------------------------------------------------------------------------------------------
+This is a simple and interactive To-Do List web application built with HTML, CSS, and JavaScript.
+It allows users to:
 
 Add tasks
 
 Remove tasks
 
-Persist tasks using Local Storage, ensuring data remains available even after refreshing or reopening the browser.
+Automatically save tasks in Local Storage, so the list remains available after refreshing or reopening the browser.
 
-Project Structure
-
-.
-├── index.html   # Main HTML structure for the To-Do List
-├── styles.css   # Styles for a clean and responsive interface
-└── script.js    # JavaScript logic for task management and Local Storage
 Features
-Add New Tasks:
-Users can type a task and click the Add Task button or press the Enter key to add it.
+Add New Tasks: Users can type a task and add it easily.
 
-Remove Tasks:
-Each task comes with a Remove button to delete it from both the DOM and Local Storage.
+Remove Tasks: Each task includes a remove button to delete it.
 
-Local Storage Persistence:
-All tasks are saved in the browser's Local Storage, ensuring that the list remains intact across page reloads and browser restarts.
+Persistent Storage: Tasks are stored in the browser using Local Storage, ensuring they are not lost after a page reload or browser restart.
 
 How It Works
-HTML (index.html)
-Contains:
+Task Input & Adding
 
-An input field (#task-input) for entering tasks
+Users enter a task in the input field and click the Add Task button or press Enter.
 
-An "Add Task" button (#add-task)
+Task Removal
 
-A task list container (#task-list)
+Each task has a remove button. Clicking it deletes the task from both the screen and Local Storage.
 
-CSS (styles.css)
-Styles the input field, button, and task list for clarity and good user experience.
+Local Storage
 
-JavaScript (script.js)
-DOM Ready Event:
-Uses:
+All tasks are saved in the browser automatically. When the page is loaded again, the saved tasks are displayed.
 
-javascript
+Project Structure
+index.html – Contains the basic structure of the app
 
-document.addEventListener('DOMContentLoaded', () => {
-    // Initialization code
-});
-Ensures all elements are loaded before running the script.
+styles.css – Handles styling for a clean and responsive design
 
-Element Selection:
-
-taskInput → Task input field
-
-addButton → Add Task button
-
-taskList → Unordered list for tasks
-
-Adding Tasks:
-
-addTask() function:
-
-Gets the task text
-
-Creates a new <li> with a Remove button
-
-Adds it to the DOM and Local Storage
-
-Removing Tasks:
-
-Each task’s Remove button deletes the task from both DOM and Local Storage.
-
-Local Storage:
-
-Saving Tasks: Updates Local Storage whenever a task is added or removed
-
-Loading Tasks: On page load, existing tasks are loaded back from Local Storage
+script.js – Contains all the logic for adding, removing, and saving tasks in Local Storage
 
 How to Run
 Clone the repository:
 
-git clone https://github.com/<ketemaderesa>/dynamic-to-do-list-js.git
-Open index.html in a browser.
+git clone https://github.com/ketemaderesa/dynamic-to-do-list-js.git
+Open the index.html file in your browser.
 
-Add tasks, remove tasks, and refresh the page to see persistent storage in action.
+Start adding and removing tasks. Refresh the page to see your tasks persist.
 
 Author
 Ketema Deresa
+GitHub: ketemaderesa ;2025
