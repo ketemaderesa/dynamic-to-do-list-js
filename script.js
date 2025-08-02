@@ -49,6 +49,14 @@ function loadTasks() {
     storedTasks.forEach(task => addTask(task, false));
 }
 loadTasks();
+addButton.addEventListener('click', () => addTask(taskInput.value));
+
+taskInput.addEventListener('keypress', (event) => {
+    if (event.key === 'Enter') {
+        addTask(taskInput.value);
+    }
+});
+
 
 
 });
