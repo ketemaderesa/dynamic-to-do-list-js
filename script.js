@@ -44,4 +44,11 @@ function removeTaskFromStorage(taskText) {
     localStorage.setItem('tasks', JSON.stringify(tasks));
 }
 
+function loadTasks() {
+    const storedTasks = JSON.parse(localStorage.getItem('tasks') || '[]');
+    storedTasks.forEach(task => addTask(task, false));
+}
+loadTasks();
+
+
 });
